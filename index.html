@@ -9,34 +9,48 @@
 <body>
     <div class="outer_structure">
         <img src="./dwnlds/kayleigh-harrington-yhn4okt6ci0-unsplash.jpg" alt="office-design">
-        <div>
+        <div class="main_content">
             <h1>Greenify your space</h1>
-            <form>
-                <div class="nameFields form_field">
-                    <label for="firstName">FIRST NAME</label>
-                    <input id="firstName" name="firstName" type="text">
+            <p class="intro">Greenify brings the beauty of plants to your workspace, home, or garden, creating vibrant, eco-friendly environments that enhance well-being and productivity. Let us help you breathe life into your space, one plant at a time.</p>
+            <form id="signup_form">
+                <div class="nameFields">
+                    <div class="form_field">
+                        <label for="firstName">FIRST NAME</label>
+                        <input id="firstName" name="firstName" type="text" required>
+                    </div>
 
-                    <label for="lastName">SECOND NAME</label>
-                    <input id="lastName" name="lastName" type="text">
+                    <div class="form_field">
+                        <label for="lastName">LAST NAME</label>
+                        <input id="lastName" name="lastName" type="text" required>
+                    </div>
                 </div>
 
-                <div class="contactFields form_field">
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="userEmail">
+                <div class="contactFields">
+                    <div class="form_field">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="userEmail" required>
+                    </div>
 
-                    <label for="phoneNum">PHONE NUMBER</label>
-                    <input type="tel" id="phoneNum" name="userPhone">
+                    <div class="form_field">
+                        <label for="phoneNum">PHONE NUMBER</label>
+                        <input type="tel" id="phoneNum" name="userPhone">
+                    </div>
                 </div>
 
-                <div class="passwordFields form_field">
-                    <label for="pwd">PASSWORD</label>
-                    <input type="password" id="pwd" name="password">
+                <div class="passwordFields">
+                    <div class="form_field">
+                        <label for="pwd">PASSWORD</label>
+                        <input type="password" id="pwd" name="password" required>
+                    </div>
 
-                    <label for="cpwd">CONFIRM PASSWORD</label>
-                    <input type="password" id="cpwd" name="confirmedPassword">
+                    <div class="form_field">
+                        <label for="cpwd">CONFIRM PASSWORD</label>
+                        <input type="password" id="cpwd" name="confirmedPassword" required>
+                    </div>
                 </div>
-
             </form>
+            <button form="signup_form">Create Account</button>
+            <div>Already have an account <span>log in</span></div>
         </div>
     </div> 
 </body>
