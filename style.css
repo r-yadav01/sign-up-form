@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    height: 100vh;
+    width: auto;
+}
+
+html {
+    font-size: 16px;
+}
+
+.outer_structure {
+    display: flex;
+}
