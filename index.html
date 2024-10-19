@@ -10,7 +10,7 @@
     <div class="outer_structure">
         <img src="./dwnlds/kayleigh-harrington-yhn4okt6ci0-unsplash.jpg" alt="office-design">
         <div class="main_content">
-            <h1>Greenify your space</h1>
+            <h1>Transform your space with nature</h1>
             <p class="intro">Greenify brings the beauty of plants to your workspace, home, or garden, creating vibrant, eco-friendly environments that enhance well-being and productivity. Let us help you breathe life into your space, one plant at a time.</p>
             <form id="signup_form">
                 <div class="nameFields">
@@ -40,18 +40,44 @@
                 <div class="passwordFields">
                     <div class="form_field">
                         <label for="pwd">PASSWORD</label>
-                        <input type="password" id="pwd" name="password" required>
+                        <input type="password" id="pwd" name="password" minlength="8" maxlength="16" required>
                     </div>
 
                     <div class="form_field">
                         <label for="cpwd">CONFIRM PASSWORD</label>
                         <input type="password" id="cpwd" name="confirmedPassword" required>
                     </div>
+
                 </div>
+                
+                <div id="error" style="color:red; font-family: monospace; font-size: 0.75rem"></div>
+
             </form>
             <button form="signup_form">Create Account</button>
-            <div>Already have an account <span>log in</span></div>
+            <div>Already have an account <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">log in</a></div>
         </div>
-    </div> 
+    </div>
+    <script>
+        let pwd = document.querySelector('#pwd');
+        let error = document.querySelector('#error');
+        let cpwd = document.querySelector('#cpwd');
+        const form = document.querySelector('#signup_form');
+        cpwd.addEventListener('blur', (event) => {
+            let pwdValue = pwd.value;
+            let cpwdValue = cpwd.value;
+
+            if (pwdValue != cpwdValue) {
+                error.textContent = "* Passwords do not match";
+                cpwd.style.border = "dashed red";
+                pwd.style.border = "dashed red";
+            }
+            else {
+                error.textContent = "";
+                cpwd.style.border = 'solid #E5E7EB';
+                pwd.style.border = 'solid #E5E7EB';
+            }
+        });
+
+    </script>
 </body>
 </html>

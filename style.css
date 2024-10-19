@@ -11,6 +11,7 @@ img {
 
 html {
     font-size: 16px;
+    line-height: 1.2em;
 }
 
 .outer_structure {
@@ -51,4 +52,36 @@ form {
 
 h1 {
     margin: 15px;
+}
+
+input {
+    padding: 2px 5px;
+    border-style: solid;
+    border-color: #E5E7EB;
+}
+
+input:focus {
+    font-weight: bold;
+    border-color: #E5E7EB;
+}
+
+label, button{
+    font-family: monospace;
+}
+
+.intro {
+    font-size: 1.2rem;
+    padding: 0px 15px;
+}
+
+input:user-invalid {
+    border: dashed red;
+}
+
+button {
+    padding: 10px 15px;
+    border: 3px ridge green;
+    border-radius: 5%/15%;
+    background-color: greenyellow;
+    font-weight: bold;
 }
